@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar  color="primary">
+    <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  padding>
+
+<ion-title style="text-align: center; margin-bottom: 25px; font-size: 16px;">Noticias Sobre o Curso de Sistemas</ion-title>
+<ion-card *ngFor="let dado of dados | async">
+  
+  <ion-card-content>
+    <ion-card-title>
+      {{dado.titulo}}
+      </ion-card-title>
+    <p>
+      {{dado.descricao}}
+    </p>
+  </ion-card-content>
+  <ion-row no-padding>
+    
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="itemTapped($event,dados)">
+          <ion-icon name='open'></ion-icon>
+          Ver noticia Completa
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-left (click)="regularShare()">
+          <ion-icon name='share'></ion-icon>
+          Compartilhar
+        </button>
+      </ion-col>
+    </ion-row>
+    
+</ion-card>
+
+
+<!--  Botão para Cadastro de Noticias na Home  -->
+ <!--<ion-buttons end>
+    <button ion-button icon-only (click)="addDado()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons>-->
+
+</ion-content>

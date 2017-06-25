@@ -1,0 +1,40 @@
+<!--
+  Generated template for the ExtensaoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar color="primary">
+    <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Extensão</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content >
+
+  <ion-list>
+  <ion-item  text-wrap *ngFor="let extensao of extensoes | async">
+
+    
+      
+      {{extensao.title}}
+    
+
+  </ion-item>
+</ion-list>
+
+<!--<ion-buttons end>
+  <button ion-button icon-only (click)="addExtensao()">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-buttons>-->
+
+
+</ion-content>
