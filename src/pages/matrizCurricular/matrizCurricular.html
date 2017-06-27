@@ -14,11 +14,11 @@
 <ion-content padding>
 
   <ion-list>
+     <img src="/assets/img/matriz.png" alt="">
     <ion-item  text-wrap *ngFor="let matriz of matrizes | async">
       {{matriz.title}}
     </ion-item>
   </ion-list>
-
   <!--<ion-buttons end>
     <button ion-button icon-only (click)="addMatriz()">
       <ion-icon name="add"></ion-icon>

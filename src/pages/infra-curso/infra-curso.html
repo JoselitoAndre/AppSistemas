@@ -12,13 +12,13 @@
     </button>
     <ion-title>Infraestrutura do Curso</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
 
   <ion-list>
+     <img src="/assets/img/estrutura.png" alt="">
   <ion-item  text-wrap *ngFor="let infra of infras | async">
     <h1 style="margin-bottom: 25px;">{{infra.title}}</h1>
     <p>{{infra.descricao}}</p>
