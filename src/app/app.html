@@ -1,8 +1,8 @@
 <ion-menu [content]="NAV">
 <ion-content>
-  <img style="margin-top: 40px; margin-bottom: 10px;" src="/assets/img/logofacisa2.png" alt="">
+  <img style="margin-top: 40px; margin-bottom: 10px;" src="https://firebasestorage.googleapis.com/v0/b/mobilebase-ed7c1.appspot.com/o/logofacisa2.png?alt=media&token=c8373dc7-8336-4dc1-a836-8976584c448f" alt="">
   <ion-list>
-      <button color= "light" menuClose ion-item *ngFor= "let page of pages"(click)= "goToPage(page.component)">
+      <button color= "primary" menuClose ion-item *ngFor= "let page of pages"(click)= "goToPage(page.component)">
         <ion-icon item-left name = "{{ page.icon }}"></ion-icon>
        {{ page.title }}
     </button>
