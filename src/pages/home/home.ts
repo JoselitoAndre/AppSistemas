@@ -13,25 +13,15 @@ import {NoticiaDetalhePage} from '../../pages/noticia-detalhe/noticia-detalhe';
 })
 
 export class HomePage {
-<<<<<<< HEAD
 
 splash = true;
 dados: FirebaseListObservable<any>;
 selectedItem: any;
 
-=======
-  
-   dados: FirebaseListObservable<any>;
-
-   selectedItem: any;
-   
-    
->>>>>>> 74ca455d8f28024a3b837c5031279ecd3a7ba58e
 
   constructor(public navCtrl: NavController,public navParams: NavParams,public alertCtrl: AlertController, db: AngularFireDatabase, private socialSharing: SocialSharing) {
     this.dados = db.list('/noticiasHome');
     //this.selectedItem = navParams.get('item');
-<<<<<<< HEAD
 
   }
 
@@ -43,31 +33,17 @@ selectedItem: any;
 
 //  itemTapped(event,item){
 //     this.navCtrl.push(VideosPage);
-=======
-    
-    
 
-    
-
-  }
 
 //  itemTapped(event,item){
-//     this.navCtrl.push(VideosPage);    
->>>>>>> 74ca455d8f28024a3b837c5031279ecd3a7ba58e
+//     this.navCtrl.push(VideosPage);
 //   }
 
   itemTapped(event,dados){
     this.navCtrl.push(NoticiaDetalhePage,{
       dados: dados
-<<<<<<< HEAD
     });
   }
-
-=======
-    });    
-  }
-  
->>>>>>> 74ca455d8f28024a3b837c5031279ecd3a7ba58e
 
 
   regularShare(){
