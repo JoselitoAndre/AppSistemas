@@ -20,9 +20,7 @@
 
   <ion-list>
   <ion-item  text-wrap *ngFor="let financiamento of financiamentos | async">
-    {{financiamento.title}}
-
-
+    <p align="justify">{{financiamento.title}}</p>
   </ion-item>
 </ion-list>
 

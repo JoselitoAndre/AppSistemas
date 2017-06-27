@@ -22,7 +22,7 @@
     <img src="https://firebasestorage.googleapis.com/v0/b/mobilebase-ed7c1.appspot.com/o/pesquisas.png?alt=media&token=2e2b2d31-e4ca-4e60-9e04-e8faee017f7d" alt="">
   <ion-item  text-wrap *ngFor="let pesquisa of pesquisas | async">
     <h1 style="margin-bottom: 25px; text-align: center">{{pesquisa.title}}</h1>
-    <p>{{pesquisa.descricao}}</p>
+    <p align="justify">{{pesquisa.descricao}}</p>
   </ion-item>
 </ion-list>
 

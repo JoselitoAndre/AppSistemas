@@ -1,6 +1,13 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+//import { NavController } from 'ionic-angular';
+//import {AngularFire, FirebaseListObservable} from 'angularfire2';
+
+import { SocialSharing } from '@ionic-native/social-sharing';
+
+
 /**
  * Generated class for the NoticiaDetalhePage page.
  *
@@ -14,16 +21,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NoticiaDetalhePage {
 
- 
+  dados: FirebaseListObservable<any>;
+  selectedItem: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, db: AngularFireDatabase) {
+    this.dados = db.list('/noticiasHome');
+
   }
   
-  
-
   ionViewDidLoad() {
-    //console.log(this.navParams.data.titulo);
+    console.log(this.dados);
   }
 
 }

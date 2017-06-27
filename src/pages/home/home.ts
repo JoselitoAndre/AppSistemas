@@ -19,6 +19,7 @@ dados: FirebaseListObservable<any>;
 selectedItem: any;
 
 
+
   constructor(public navCtrl: NavController,public navParams: NavParams,public alertCtrl: AlertController, db: AngularFireDatabase, private socialSharing: SocialSharing) {
     this.dados = db.list('/noticiasHome');
     //this.selectedItem = navParams.get('item');
@@ -40,9 +41,7 @@ selectedItem: any;
 //   }
 
   itemTapped(event,dados){
-    this.navCtrl.push(NoticiaDetalhePage,{
-      dados: dados
-    });
+    this.navCtrl.push(NoticiaDetalhePage);
   }
 
 

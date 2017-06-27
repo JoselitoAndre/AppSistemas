@@ -20,20 +20,18 @@
 
   <ion-list>
      <img src="https://firebasestorage.googleapis.com/v0/b/mobilebase-ed7c1.appspot.com/o/perfilinterno.jpeg?alt=media&token=0b8cb8f3-5882-40e3-a9f8-551c644bffca">
-  <ion-item  text-wrap *ngFor="let curso of cursos | async">
-    {{curso.title}}
+  <ion-item  text-wrap *ngFor="let curso of cursos | async" >
+    <p align="justify">{{curso.title}}</p>
   </ion-item>
 </ion-list>
 
 
 
-  <ion-buttons end>
+  <!--<ion-buttons end>
     <button ion-button icon-only (click)="addCurso()">
       <ion-icon name="add"></ion-icon>
     </button>
-  </ion-buttons>
-
-
+  </ion-buttons>-->
 
 
 </ion-content>
